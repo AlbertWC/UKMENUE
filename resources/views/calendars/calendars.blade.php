@@ -46,18 +46,24 @@
 
 @extends('layouts.app')
 @section('content')
-    <h2>My Events list</h2>
-    <div class="row">
+
+<style>
+    
+</style>
+    
+    <div class="a"><h2>My Events list</h2></div>
+    <div class="row" id="calendarbutton">
             @if (!Auth::guest())
-                <a href="/venues" class="btn btn-success">Add Event</a>
-                <a href="/events/display" class="btn btn-primary">Edit/Delete my Events</a>
-                
+        
+                <a href="/venues"><img src="../Create Event.png" alt="" ></a>
+                <a href="/events/display"><img src="../edit.jpeg" alt="" ></a>
+         
             @endif
                 
             </div>
 @endsection
 @section('calendar')
-    <div class="card" width="200px" height="600px" id="displaycalendar">
+    <div class="card" width="220px" height="500px" id="displaycalendar">
         <div class="card-body">
         {!! $calendar->calendar() !!}
         </div>

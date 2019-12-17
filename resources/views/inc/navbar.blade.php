@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   {{-- Dashboard --}}
   @if (Auth::guard('web')->check())
-  <a class="navbar-brand" href="/home">UKMenue Event Planning System</a>      
+  <a class="navbar-brand" href="/home">UKM Event Planning System</a>      
   @else
-  <a class="navbar-brand" href="/admin">UKMenue Event Planning System</a>
+  <a class="navbar-brand" href="/admin">UKM Event Planning System</a>
   
   @endif
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -16,6 +16,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/admin/feedback">Feedback</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/calendars/approval">Approval</a>
           </li>
         @endif
 
@@ -32,18 +35,7 @@
           </li>
         @endif
           
-          {{-- temporarily logout --}}
-            <li class="nav-item">
-              <a class="nav-link"href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                  {{ __('Logout') }}
-              </a>
-
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  @csrf
-              </form>
-            </li>
+            
        
 
         </ul>
@@ -51,9 +43,7 @@
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
               @guest
-              <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-              </li>
+             
               @if (Route::has('register'))
                   <li class="nav-item">
                       <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>

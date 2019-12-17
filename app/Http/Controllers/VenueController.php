@@ -119,6 +119,7 @@ class VenueController extends Controller
                 [
                     'color' => $row->color,
                 ]
+                
             );
         }
         //$calendar = Calendar::get('venue_id' , '=' , $request->session()->get('venueid'));

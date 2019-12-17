@@ -122,7 +122,7 @@ class CalendarController extends Controller
             $eventImageExtension = $request->file('event_image')->getClientOriginalExtension();
         
             // file name to store
-            $eventImageToStore  = $eventImage.'_'.time().'_'.$eventImageExtension;
+            $eventImageToStore  = $eventImage.'_'.time().'.'.$eventImageExtension;
 
             //Upload image 
             $path = $request->file('event_image')->storeAs('public/event_image',$eventImageToStore);

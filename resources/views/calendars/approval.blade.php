@@ -60,7 +60,7 @@
         <div class="header">
             <h1>Approval Events</h1>
         </div>
-    <div class="jumbotron">
+    <div class="">
         <table class="table table-striped table-bordered table-hover">
             <thead class="head">
                 <h3>Lists</h3>
@@ -85,14 +85,17 @@
                         {{Form::open(['action' => ['ApprovalController@updateevent', $calendarlist->id], 'method'=> 'POST'])}}
                             {{Form::text('declinemessage', '', ['class' => 'form-control', 'placeholder' => 'Decline Message'])}}
                             <input type="hidden" name="id" id="{{$calendarlist->id}}" value= {{$calendarlist->id}}>    
-                            <button name="approvebtn" id="approvebtn" type="submit" class="btn btn-primary" value="approve">Approve</button>
-                            <button name="declinebtn" id="declinebtn" type="submit" class="btn btn-primary" value="decline">Decline</button>
+                            <button name="approvebtn" id="approvebtn" type="submit" class="btn btn-success" value="approve">Approve</button>                 
+                            <button name="declinebtn" id="declinebtn" type="submit" class="btn btn-danger" value="decline">Decline</button>
 
                         {{Form::close()}}
                     </td>
                     <td>
+                        <a download href="/storage/event_image/{{$calendarlist->event_image}}">
+                            <img src="../Download_Poster.png" alt="Download image" width="150px" height="35px">
+                        </a>
                         <a download href="/storage/approval_letter/{{$calendarlist->approval_letter}}">
-                            <button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-download"> Download</i></button>
+                            <img src="../Download_Document.png" alt="Download Documents" width="150px" height="35px">
                         </a>
                     </td>
                     </tr>

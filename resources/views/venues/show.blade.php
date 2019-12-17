@@ -8,10 +8,10 @@
         {{-- <button type="button" class="btn btn-secondary" href=>Secondary</button>  --}}
         <h3>{{$venue->venue_name}}</h3>
         <br>
-        <img src="/storage/venue_image/{{$venue->venue_image}}" alt="{{$venue->venue_name}}" width="200px" height="200px">
+        <img src="/storage/venue_image/{{$venue->venue_image}}" alt="{{$venue->venue_name}}" width="300px" height="200px">
         <h6>Description: {!!$venue->venue_description!!}</h6>
         @if (Auth::guard('web')->check())
-            <a href="/events/create" class="btn btn-info" type="hidden">Book</a>    
+            <a href="/events/create" ><img src="../Book Venue.png" alt="" ></a>  
         @endif
 
     <br>
