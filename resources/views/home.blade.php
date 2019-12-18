@@ -30,25 +30,25 @@
 						<div class="hero-scroll">
 							<div class="hero-track">
 								
-								<div class="hs-item set-bg" data-setbg="img/hero/ftsm.jpg">
+								<div class="hs-item set-bg" data-setbg="img/hero/dewan_kuliah_ftsm.jpg">
 									
 									<div class="hs-info">
 										<h5>FTSM</h5>
-										<p><a href="/venues/1"><img src="../View Venue.png" alt="" ></a></p>
+										<p><a href="/venues/5"><img src="../View Venue.png" alt="" ></a></p>
 										
 									</div>
 								</div>
-								<div class="hs-item set-bg" data-setbg="img/hero/dectar.jpg">
+								<div class="hs-item set-bg" data-setbg="img/hero/DECTAR.jpg">
 									<div class="hs-info">
 										<h5>Dectar</h5>
-										<p><a href="/venues/2"><img src="../View Venue.png" alt="" ></a></p>
+										<p><a href="/venues/9"><img src="../View Venue.png" alt="" ></a></p>
 										
 									</div>
 								</div>
 								<div class="hs-item set-bg" data-setbg="img/hero/dg.jpg">
 									<div class="hs-info">
 										<h5>Dewan Gemilang</h5>
-										<p><a href="/venues/3"><img src="../View Venue.png" alt="" ></a></p>
+										<p><a href="/venues/8"><img src="../View Venue.png" alt="" ></a></p>
 										
 									</div>
 								</div>
