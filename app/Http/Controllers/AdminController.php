@@ -86,6 +86,7 @@ class AdminController extends Controller
         $empty = 0;
         $todayvenuecounter = 0;
         $venuemonthcounter = 0;
+        $ratecounter = 0;
         $rate = 0;
         $data = [
             'haventapprove' => $haventapprove,
@@ -103,6 +104,7 @@ class AdminController extends Controller
             'venuemonthcounter' => $venuemonthcounter,
             'rate' => $rate,
             'yesterday' => $yesterday,
+            'ratecounter' => $ratecounter,
         ];
         // dd($venuecounterlist);
         return view('admin')->with($data);

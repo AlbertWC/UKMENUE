@@ -57,13 +57,15 @@
                         </h5>
                     </div>
                     <div class="card-body">
+                    {{-- today counter --}}
                     @foreach ($todayvenue as $eachvenue)
                         @if ($eachvenue->venue_id == $venuelist->venue_id)
                             @php
-                                $todayvenuecounter += 1
+                                $todayvenuecounter += 1;
                             @endphp
                         @endif
                     @endforeach
+                    {{-- this month performance  --}}
                     @foreach ($date as $month)
                         @if ($month->venue_id == $venuelist->venue_id)
                             @php
@@ -71,24 +73,40 @@
                             @endphp
                         @endif
                     @endforeach
+                    
+                    {{-- comparison with yesterdaay --}}
+                    @foreach ($yesterday as $yesterdaycounter)
+                        @if ($yesterdaycounter->venue_id == $venuelist->venue_id)
+                            @php
+                                $rate += 1;
+                            @endphp
+                        @endif    
+                    @endforeach
+                    
                     @php
-                        $rate =  $todayvenuecounter - (count($yesterday))
+                        $ratecounter =  $todayvenuecounter - $rate;
                     @endphp
+
                     This month: {{$venuemonthcounter}}
                     <br>
                     Today: {{$todayvenuecounter}}
                     <br>
                     Rate:
-                    @if ($todayvenuecounter > count($yesterday))
-                            increase : {{$rate}}
+
+                    @if ($todayvenuecounter > $rate)
+                            increase : {{$ratecounter}}
                         @else
-                            decrease : {{$rate}}
+                            decrease : {{$ratecounter}}
                     @endif
+
                     </div>
+
                     @php
-                    $venuemonthcounter = 0;
-                    $todayvenuecounter = 0;
-                @endphp
+                        $venuemonthcounter = 0;
+                        $todayvenuecounter = 0;
+                        $ratecounter = 0;
+                        $rate = 0;
+                    @endphp
                 @endforeach
             </div>
             </div>
